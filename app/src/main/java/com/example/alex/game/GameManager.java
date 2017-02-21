@@ -9,8 +9,14 @@ import android.graphics.Paint;
 public class GameManager {
     private MainCircle mainCircle;
     private Paint paint;
+    private CanvasView canvasView;
+    private static int width;
+    private static int height;
 
-    public GameManager() {
+    public GameManager(CanvasView canvasView, int w, int h) {
+        this.canvasView = canvasView;
+        width = w;
+        height = h;
         initMainView();
         initPaint();
     }
@@ -26,6 +32,6 @@ public class GameManager {
     }
 
     private void initMainView() {
-        mainCircle = new MainCircle(200, 500);
+        mainCircle = new MainCircle(width / 2, height / 2);
     }
 }
