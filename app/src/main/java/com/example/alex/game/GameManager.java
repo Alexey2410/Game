@@ -27,4 +27,16 @@ public class GameManager {
     private void initMainView() {
         mainCircle = new MainCircle(width / 2, height / 2);
     }
+
+    public void onTouchEvent(int x, int y) {
+        mainCircle.moveMainCircleWhenTouchAt(x, y);
+    }
+
+    public static int getWidth() {
+        return width;
+    }
+
+    public static int getHeight() {
+        return height;
+    }
 }
