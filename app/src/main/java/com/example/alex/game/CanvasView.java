@@ -46,15 +46,13 @@ public class CanvasView extends View implements ICanvasView {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
-//        canvas.drawCircle(mainCircle.getX(), mainCircle.getY(), mainCircle.getRadius(), paint);
         this.canvas = canvas;
         gameManager.onDraw();
     }
 
     @Override
-    public void drawCircle(MainCircle mainCircle) {
-
+    public void drawCircle(MainCircle circle) {
+        canvas.drawCircle(circle.getX(), circle.getY(), circle.getRadius(), paint);
     }
 
     private void initPaint() {
