@@ -36,6 +36,9 @@ public class GameManager {
 
     public void onDraw() {
         canvasView.drawCircle(mainCircle);
+        for (EnemyCircle circle : circles) {
+            canvasView.drawCircle(circle);
+        }
     }
 
     private void initMainCircle() {

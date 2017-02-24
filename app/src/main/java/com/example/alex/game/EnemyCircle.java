@@ -16,9 +16,9 @@ public class EnemyCircle extends SimpleCircle {
 
     public static EnemyCircle getRandomCircle() {
         Random random = new Random();
-        int x = random.getInt(GameManager.getWidth());
-        int y = random.getInt(GameManager.getHeight());
-        int radius = FROM_RADIUS + random.getInt(TO_RADIUS - FROM_RADIUS);
+        int x = random.nextInt(GameManager.getWidth());
+        int y = random.nextInt(GameManager.getHeight());
+        int radius = FROM_RADIUS + random.nextInt(TO_RADIUS - FROM_RADIUS);
         EnemyCircle enemyCircle = new EnemyCircle(x, y, radius);
         return enemyCircle;
     }
